@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Bites | Empanadas Dulces Artesanales</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Bar / Navbar -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <img class="brand__logo-img" src="assets/logo.png" alt="Logo Sweet Bites Bakery">
+        <span class="brand__text">
+          <span class="brand__name">Sweet Bites</span>
+          <span class="brand__tagline">Empanadas Dulces Artesanales</span>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="#inicio">Inicio</a>
+        <a class="nav__link" href="#productos">Nuestros Productos</a>
+        <a class="nav__link" href="#nosotros">Sobre Nosotros</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="inicio" aria-label="Sección principal">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <!-- Logo grande en hero -->
+          <img class="hero__logo" src="assets/logo.png" alt="Sweet Bites Bakery">
+
+          <p class="eyebrow">Hechas con cariño, sabor y tradición</p>
+          <h1 class="hero__title">Sweet Bites</h1>
+          <p class="hero__subtitle">Empanadas Dulces Artesanales</p>
+
+          <div class="hero__chips" aria-label="Características">
+            <span class="chip">Horneadas</span>
+            <span class="chip">Rellenos cremosos</span>
+            <span class="chip">Ingredientes de calidad</span>
+          </div>
+
+          <p class="hero__note">
+            Catálogo para proyecto universitario (PIP). Sin pedidos en línea, solo información.
+          </p>
+        </div>
+
+        <div class="hero__card" role="img" aria-label="Empanadas en presentación">
+          <div class="hero__card-inner">
+            <div class="hero__card-badge">Menú dulce</div>
+            <h3 class="hero__card-title">Variedades favoritas</h3>
+            <p class="hero__card-text">
+              Cajeta, Nutella con fresas, dulce de leche, tres leches y más.
+            </p>
+            <div class="price-strip" aria-label="Precios">
+              <div class="price-strip__item">
+                <span class="price-strip__label">Individual</span>
+                <span class="price-strip__value">$12 MXN</span>
+              </div>
+              <div class="price-strip__item">
+                <span class="price-strip__label">Paquete 6</span>
+                <span class="price-strip__value">$70 MXN</span>
+              </div>
+              <div class="price-strip__item">
+                <span class="price-strip__label">Paquete 12</span>
+                <span class="price-strip__value">$130 MXN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#productos" aria-label="Bajar a productos">
+        <span>Ver productos</span>
+        <span class="scroll-indicator__dot" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- Productos -->
+    <section class="section" id="productos" aria-label="Nuestros productos">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Nuestros Productos</h2>
+          <p class="section__subtitle">
+            Empanadas dulces artesanales con rellenos cremosos y sabores clásicos (y antojadizos).
+          </p>
+        </div>
+
+        <div class="pricing-note" aria-label="Lista de precios">
+          <div class="pricing-note__row">
+            <span>Empanada individual</span>
+            <strong>$12 MXN</strong>
+          </div>
+          <div class="pricing-note__row">
+            <span>Paquete de 6 empanadas</span>
+            <strong>$70 MXN</strong>
+          </div>
+          <div class="pricing-note__row">
+            <span>Paquete de 12 empanadas</span>
+            <strong>$130 MXN</strong>
+          </div>
+        </div>
+
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="https://images.unsplash.com/photo-1624128082323-beb6b8b508db?auto=format&fit=crop&fm=jpg&q=60&w=1400"
+                   alt="Empanadas recién horneadas en charola"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Cajeta</h3>
+              <p class="card__desc">
+                Relleno suave de cajeta con un toque de vainilla. Dulce, cremosita y perfecta para acompañar café.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="assets/fresa.png"
+                   alt="Empanadas estilo artesanal sobre mesa"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Nutella con Fresas</h3>
+              <p class="card__desc">
+                Nutella derretidita por dentro con notas frutales. La fresa le da frescura y balance al chocolate.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="https://images.unsplash.com/photo-1619926096619-5956ab4dfb1b?auto=format&fit=crop&fm=jpg&q=60&w=1400"
+                   alt="Empanadas en sartén con estilo oscuro"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Dulce de Leche</h3>
+              <p class="card__desc">
+                Clásica y súper cremosa. Dulce de leche con textura sedosa y sabor intenso, en masa doradita.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="assets/philadelphia.jpg"
+                   alt="Empanada abierta mostrando relleno"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Queso Philadelphia</h3>
+              <p class="card__desc">
+                Clásica y súper cremosa. Queso Philadelphia con textura sedosa y sabor suave, en masa doradita.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="https://images.unsplash.com/photo-1679310249395-ae267ae0d273?auto=format&fit=crop&fm=jpg&q=60&w=1400"
+                   alt="Empanadas en vitrina con buena iluminación"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Chocolate con Nuez</h3>
+              <p class="card__desc">
+                Chocolate con sabor profundo y nuez tostada para ese crunch. Una opción más intensa y elegante.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card__img-wrap">
+              <img class="card__img"
+                   src="assets/nuez.png"
+                   alt="Empanadas en mesa para compartir"
+                   loading="lazy"/>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Empanada de Cajeta con Nuez</h3>
+              <p class="card__desc">
+                Cajeta cremosa + nuez tostada. Dulzura tradicional con un toque crujiente que la hace favorita.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="section section--alt" id="nosotros" aria-label="Sobre nosotros">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Sobre Nosotros</h2>
+          <p class="section__subtitle">
+            Una marca pequeña, pero con un objetivo grande: que cada mordida se sienta hecha en casa.
+          </p>
+        </div>
+
+        <div class="about">
+          <div class="about__card">
+            <h3 class="about__title">Nuestra historia</h3>
+            <p class="about__text">
+              Sweet Bites nace como un proyecto con esencia artesanal: empanadas dulces que combinan recetas tradicionales
+              con sabores modernos. Buscamos que cada empanada tenga relleno generoso, masa doradita y un sabor que se te
+              antoje repetir.
+            </p>
+          </div>
+
+          <div class="about__card">
+            <h3 class="about__title">Misión</h3>
+            <p class="about__text">
+              Ofrecer empanadas dulces artesanales con ingredientes de calidad, cuidando cada detalle para brindar una
+              experiencia rica, confiable y consistente.
+            </p>
+
+            <h3 class="about__title mt">Visión</h3>
+            <p class="about__text">
+              Ser una referencia local en Monterrey por empanadas dulces artesanales, destacando por sabor, presentación
+              y atención cercana.
+            </p>
+          </div>
+
+          <div class="about__card about__card--signature">
+            <h3 class="about__title">Créditos del proyecto</h3>
+            <p class="about__text">
+              Creado por <strong>Axel Alberto Mireles Martínez</strong>
+            </p>
+
+            <div class="signature">
+              <p class="signature__label">Espacio para firma digital (opcional):</p>
+
+              <div class="signature__pad" aria-label="Área de firma digital">
+                <canvas id="signatureCanvas" width="640" height="220"></canvas>
+              </div>
+
+              <div class="signature__actions">
+                <a href="#" class="link" id="clearSignature">Limpiar firma</a>
+              </div>
+
+              <p class="signature__hint">Tip: firma con el mouse o con touch en celular.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto" aria-label="Contacto">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__subtitle">Solo información de contacto (sin formulario y sin mapa).</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__card">
+            <h3 class="contact__title">Datos</h3>
+            <ul class="contact__list">
+              <li><span class="contact__label">Dueña:</span> Ana Karen Amaro Salazar</li>
+              <li><span class="contact__label">Email:</span> bite_sweet@outlook.com</li>
+              <li><span class="contact__label">Dirección:</span> Mar Negro 1812, Monterrey, Nuevo León</li>
+            </ul>
+
+            <a class="whatsapp"
+               href="https://wa.me/5218126671786"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Abrir WhatsApp para enviar mensaje">
+              <span class="whatsapp__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor" aria-hidden="true">
+                  <path d="M19.11 17.2c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.82-.73-1.38-1.63-1.54-1.9-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.12 2.82.14.18 1.93 2.94 4.68 4.12.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+                  <path d="M16.02 3C9.39 3 4 8.39 4 15.02c0 2.08.54 4.12 1.58 5.92L4 29l8.26-1.53a12 12 0 0 0 3.76.6C22.65 28.07 28 22.65 28 16.02 28 9.39 22.65 3 16.02 3zm0 22.03c-1.25 0-2.47-.25-3.62-.75l-.26-.11-4.9.91.93-4.78-.13-.28a9.96 9.96 0 0 1-1.04-4.98c0-5.52 4.49-10 10.02-10 5.52 0 10 4.49 10 10.02 0 5.52-4.49 10-10.02 10z"/>
+                </svg>
+              </span>
+              <span class="whatsapp__text">
+                <span class="whatsapp__label">WhatsApp</span>
+                <span class="whatsapp__value">+52 1 81 2667 1786</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="contact__aside">
+            <div class="contact__pill">
+              <strong>Horario sugerido:</strong> Lun–Sáb (10:00 a 18:00)
+            </div>
+            <div class="contact__pill">
+              <strong>Nota:</strong> Esta página no procesa pedidos. Es solo informativa para el PIB.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> Sweet Bites. Todos los derechos reservados.</p>
+      <p class="footer__dev">Desarrollado por Axel Alberto Mireles Martínez.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
