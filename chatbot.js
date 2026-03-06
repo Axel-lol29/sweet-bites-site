@@ -48,7 +48,7 @@ async function sendMessage(){
 
   try{
 
-    const res = await fetch("http://localhost:5678/webhook/chatbot",{
+    const res = await fetch("https://laquita-noncontrolled-deneen.ngrok-free.dev/webhook/chatbot",{
       method:"POST",
       headers:{ "Content-Type":"application/json"},
       body:JSON.stringify({message:text})
