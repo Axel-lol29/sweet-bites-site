@@ -53,7 +53,7 @@ async function sendMessage(){
 
   const data = await res.json();
 
-  addMessage(data.reply,"bot");
+  addMessage(data.response,"bot");
 }
 
 send.onclick = sendMessage;
