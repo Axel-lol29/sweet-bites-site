@@ -44,7 +44,7 @@ async function sendMessage(){
   if(!text) return;
 
   addMessage(text,"user");
-  input.value="";
+  input.value = "";
 
   try{
 
@@ -58,10 +58,12 @@ async function sendMessage(){
 
     console.log("Respuesta servidor:", data);
 
-    // leer correctamente la respuesta del backend
+    // detectar diferentes formatos de respuesta
     let botReply =
+      data.text ||
       data.reply ||
       data.response ||
+      (Array.isArray(data) && data[0]?.text) ||
       (Array.isArray(data) && data[0]?.reply) ||
       "Lo siento, no pude generar respuesta.";
 
