@@ -27,7 +27,33 @@ const send = document.getElementById("chatbot-send");
 const input = document.getElementById("chatbot-input");
 const messages = document.getElementById("chatbot-messages");
 
-button.onclick = () => box.style.display = "flex";
+let welcomeShown = false;
+
+// abrir chat
+button.onclick = () => {
+  box.style.display = "flex";
+
+  // mensaje automático de bienvenida
+  if(!welcomeShown){
+    addMessage(
+`¡Hola! 👋 Bienvenido a Sweet Bites.
+
+Puedo ayudarte con información sobre:
+
+• Precios
+• Sabores
+• Ubicación
+• Horario de envíos
+
+¿En qué te gustaría información?`,
+    "bot"
+    );
+
+    welcomeShown = true;
+  }
+};
+
+// cerrar chat
 close.onclick = () => box.style.display = "none";
 
 function addMessage(text, sender){
@@ -58,7 +84,6 @@ async function sendMessage(){
 
     console.log("Respuesta servidor:", data);
 
-    // detectar diferentes formatos de respuesta
     let botReply =
       data.text ||
       data.reply ||
