@@ -33,7 +33,6 @@ let welcomeShown = false;
 button.onclick = () => {
   box.style.display = "flex";
 
-  // mensaje automático de bienvenida
   if(!welcomeShown){
     addMessage(
 `¡Hola! 👋 Bienvenido a Sweet Bites.
@@ -57,9 +56,40 @@ Puedo ayudarte con información sobre:
 close.onclick = () => box.style.display = "none";
 
 function addMessage(text, sender){
+
   const msg = document.createElement("div");
   msg.className = sender;
-  msg.innerText = text;
+
+  // detectar links
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+  const formattedText = text.replace(urlRegex, url => {
+
+    // si es link de WhatsApp mostrar botón
+    if(url.includes("wa.me")){
+      return `
+      <br><br>
+      <a href="${url}" target="_blank" 
+      style="
+        display:inline-block;
+        padding:10px 14px;
+        background:#25D366;
+        color:white;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:bold;
+      ">
+      Pedir por WhatsApp
+      </a>
+      `;
+    }
+
+    // si es otro link normal
+    return `<a href="${url}" target="_blank">${url}</a>`;
+  });
+
+  msg.innerHTML = formattedText;
+
   messages.appendChild(msg);
   messages.scrollTop = messages.scrollHeight;
 }
